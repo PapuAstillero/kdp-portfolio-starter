@@ -10,13 +10,13 @@
 }
 
 .dark {
-  background: url(C:\Users\PC\Desktop\Portfolio\kdp-portfolio-starter\src\assets\background\image.png);
+  background: url("./assets/background/image.png");
   background-size: cover;
   color: white
 }
 
 .light {
-  background: url(C:\Users\PC\Desktop\Portfolio\kdp-portfolio-starter\src\assets\background\pexels-gdtography-277628-911738.jpg);
+  background: url("./assets/background/pexels-gdtography-277628-911738.jpg");
   background-size: cover;
 }
 
