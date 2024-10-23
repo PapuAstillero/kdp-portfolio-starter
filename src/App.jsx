@@ -1,28 +1,27 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import languages from './lang';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Paginas/Layout';
+import Inicio from './Paginas/Inicio';
+import SobreMi from './Paginas/SobreMi';
+import Proyectos from './Paginas/Proyectos';
 
 function App() {
 	const [lang, setLang] = useState(languages.spanish);
 	const [dark, setDark] = useState(false);
-	console.log('dark :', dark);
-
-	const handleLang = () => {
-		if (lang.KEY === 'ES') setLang(languages.english);
-		if (lang.KEY === 'EN') setLang(languages.spanish);
-	};
-
-	const toggleTheme = () => {
-		setDark(!dark);
-	};
 
 	return (
-		<div className={`app ${dark ? 'dark' : 'light'}`}>
-			<button onClick={toggleTheme}>Tema: {dark ? 'Oscuro' : 'Claro'}</button>
-			<button onClick={handleLang}>Idioma={lang.KEY}</button>
-			<h1>{lang.title}</h1>
-			<p>{lang.language}</p>
-		</div>
+
+		<>
+			<Routes>
+				<Route path="/" element={<Layout lang={lang} dark={dark} setLang={setLang} setDark={setDark} />}>
+					<Route index element={<Inicio lang={lang} dark={dark} />} />
+					<Route path='Proyectos' element={<Proyectos lang={lang} dark={dark} />} />
+					<Route path='SobreMi' element={<SobreMi lang={lang} dark={dark} />} />
+				</Route>
+			</Routes>
+		</>
 	);
 }
 

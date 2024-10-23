@@ -3,15 +3,26 @@
   margin: 0px;
   box-sizing: border-box;
 }
-.app{
+
+.app {
   width: 100vw;
   height: 100vh;
 }
-.dark{
-  background-color: rgb(72, 72, 72);
-  color: antiquewhite;
+
+.dark {
+  background: url(C:\Users\PC\Desktop\Portfolio\kdp-portfolio-starter\src\assets\background\image.png);
+  background-size: cover;
+  color: white
 }
-.light{
-  background-color: antiquewhite;
+
+.light {
+  background: url(C:\Users\PC\Desktop\Portfolio\kdp-portfolio-starter\src\assets\background\pexels-gdtography-277628-911738.jpg);
+  background-size: cover;
+}
+
+#nav {
+  background-color: rgb(248, 248, 248);
   color: black;
+  text-align: left;
+
 }
